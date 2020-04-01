@@ -61,7 +61,7 @@
                 <configuration>
                     <!-- 注意imageName一定要是符合正则[a-z0-9-_.]的，否则构建不会成功 -->
                     <!-- 详见：https://github.com/spotify/docker-maven-plugin    Invalid repository name ... only [a-z0-9-_.] are allowed-->
-                    <imageName>jcera-demo</imageName>
+                    <imageName>106.13.10.5:30000/jcera-demo</imageName>
                     <dockerDirectory>${project.basedir}</dockerDirectory>
                     <imageTags>
                         <imageTag>${project.version}</imageTag>
@@ -74,6 +74,23 @@
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
+
+                    <!-- 如果是私服并且有登陆认证需要需要修改Maven的全局配置文件settings.xml 加入一下配置-->
+
+                    <!--<servers>-->
+                    <!--    <server>-->
+                    <!--        <id>docker-registry</id>-->
+                    <!--        <username>你的DockerHub用户名</username>-->
+                    <!--        <password>你的DockerHub密码</password>-->
+                    <!--        <configuration>-->
+                    <!--            <email>你的DockerHub邮箱</email>-->
+                    <!--        </configuration>-->
+                    <!--    </server>-->
+                    <!--</servers>-->
+
+                    <!-- 然后此处取消注释 serverId与maven配置文件settings.xml一致 -->
+<!--                    <serverId>docker-registry</serverId>-->
+
                 </configuration>
             </plugin>
         </plugins>
