@@ -12,6 +12,6 @@ First Demo project for Spring Boot
 
 > mvn clean package docker:build -Dmaven.test.skip=true -DpushImageTag
 
-`docker:build`：Docker构建镜像
-`-Dmaven.test.skip=true`：忽略测试代码的编译测试
-`-DpushImageTag`：推送镜像的Tag标签
++ `docker:build`：Docker构建镜像
++ `-Dmaven.test.skip=true`：忽略测试代码的编译测试
++ `-DpushImageTag`：推送镜像的Tag标签
