@@ -80,6 +80,7 @@
                 <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
             <!-- docker的maven插件，官网：https://github.com/spotify/docker-maven-plugin -->
+            <!-- mvn clean package docker:build -Dmaven.test.skip=true -DpushImageTag -->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
