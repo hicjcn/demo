@@ -10,12 +10,18 @@ public class HelloController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String hello() {
         logger.debug("hello");
         logger.info("hello");
         logger.warn("hello");
         logger.error("hello");
-        return "hello";
+        return "First demo for jcera started";
     }
+    
+    @RequestMapping("/heath")
+    public String hello() {
+        return "success";
+    }
+
 }
