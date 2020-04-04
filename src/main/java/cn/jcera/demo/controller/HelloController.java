@@ -19,7 +19,7 @@ public class HelloController {
         return "First demo for jcera started";
     }
     
-    @RequestMapping("/heath")
+    @RequestMapping("/health")
     public String hello() {
         return "success";
     }
