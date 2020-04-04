@@ -11,7 +11,7 @@ public class HelloController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @RequestMapping("/")
-    public String hello() {
+    public String index() {
         logger.debug("hello");
         logger.info("hello");
         logger.warn("hello");
