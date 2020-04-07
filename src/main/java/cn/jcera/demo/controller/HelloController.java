@@ -18,9 +18,10 @@ public class HelloController {
         logger.error("hello");
         return "First demo for jcera started";
     }
-    
+
     @RequestMapping("/health")
     public String hello() {
+        logger.info("Report is currently healthy！");
         return "success";
     }
 
